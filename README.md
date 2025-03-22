@@ -4,13 +4,11 @@ Application web React moderne utilisant Vite, TypeScript, et Tailwind CSS.
 
 ## Technologies utilisées
 
-- React 18
 - TypeScript
 - Vite
 - Tailwind CSS
 - Shadcn UI
 - React Router
-- i18next pour l'internationalisation
 
 ## Installation
 
@@ -19,7 +17,7 @@ Application web React moderne utilisant Vite, TypeScript, et Tailwind CSS.
 pnpm install
 
 # Lancer le serveur de développement
-pnpm dev
+pnpm vite
 
 # Construire pour la production
 pnpm build
@@ -43,7 +41,5 @@ src/
 ## Scripts disponibles
 
 - `pnpm dev` : Lance le serveur de développement
-- `pnpm build` : Construit l'application pour la production
-- `pnpm build:dev` : Construit l'application en mode développement
+- `pnpm vite` : Construit l'application en mode développement
 - `pnpm preview` : Prévisualise la version de production
-- `pnpm lint` : Vérifie le code avec ESLint
