@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   publicDir: 'public',
-  base: '/ihorizon.org/', // Assure-toi que le nom correspond à ton dépôt
+  base: '/',
   preview: {
     port: 8080,
     strictPort: true,
