@@ -57,7 +57,7 @@ const Features: React.FC<FeaturesProps> = ({ currentLang }) => {
                 <h3 className="text-3xl font-bold text-white">{getTranslation(`features.${feature.key}.title`, currentLang as 'fr' | 'en')}</h3>
                 <p className="text-lg text-gray-300">{getTranslation(`features.${feature.key}.description`, currentLang as 'fr' | 'en')}</p>
                 <a
-                  href="https://discord.com/oauth2/authorize?client_id=898934061322956873&permissions=8&scope=bot%20applications.commands"
+                  href="https://discord.com/oauth2/authorize?client_id=945202900907470899"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-3 bg-[var(--secondaryColor)] text-white rounded-lg font-semibold hover:opacity-90 transition-all transform hover:scale-105 shadow-glow"

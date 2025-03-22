@@ -21,7 +21,7 @@ const Stats: React.FC<StatsProps> = ({ currentLang }) => {
             {getTranslation('statsSubtitle', currentLang as 'fr' | 'en')}
           </p>
           <a
-            href="https://discord.com/oauth2/authorize?client_id=898934061322956873&permissions=8&scope=bot%20applications.commands"
+            href="https://discord.com/oauth2/authorize?client_id=945202900907470899"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-5 bg-[var(--secondaryColor)] text-white rounded-lg font-bold hover:opacity-90 transition-all transform hover:scale-105 shadow-glow"

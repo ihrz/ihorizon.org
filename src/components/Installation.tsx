@@ -83,7 +83,7 @@ const Installation: React.FC<InstallationProps> = ({ currentLang }) => {
         {/* CTA */}
         <div className="text-center bg-[#1a1a1a]/50 backdrop-blur-sm rounded-2xl p-12 border border-[var(--secondaryColor)]/10">
           <a
-            href="https://discord.com/oauth2/authorize?client_id=898934061322956873&permissions=8&scope=bot%20applications.commands"
+            href="https://discord.com/oauth2/authorize?client_id=945202900907470899"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-5 bg-gradient-to-r from-[var(--secondaryColor)] to-[var(--tertiaryColor)] text-white rounded-lg font-bold hover:opacity-90 transition-all transform hover:scale-105 shadow-glow mb-8"
