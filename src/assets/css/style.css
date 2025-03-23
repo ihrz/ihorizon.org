@@ -629,15 +629,15 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
   transition: var(--transition);
   width: 100%;
   text-align: center;
 }
 
 .site-logo img {
-  width: clamp(2.5rem, 5vw, 4rem);
-  height: clamp(2.5rem, 5vw, 4rem);
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(219, 0, 172, 0.3));
   transition: var(--transition);
@@ -656,20 +656,10 @@ html {
 }
 
 /* Responsive styles pour le logo */
-@media (max-width: 768px) {
-  .site-logo {
-    padding: 0.5rem;
-    justify-content: center;
-    width: 100%;
-  }
-  
+@media (min-width: 768px) {
   .site-logo img {
-    margin: 0 auto;
-  }
-  
-  .logo-text {
-    text-align: center;
-    margin: 0 auto;
+    width: 48px;
+    height: 48px;
   }
 }
 

@@ -36,16 +36,16 @@ const Layout = () => {
     <div className="min-h-screen bg-gradient-to-b from-[#131415] via-[#1a1a1c] to-[#131415]">
       <header className={`site-header fixed top-0 z-[100] backdrop-blur-md border-b transition-all duration-300 ${
         scrollPosition > 20 
-          ? 'bg-[#131415]/95 border-[#303236]/50 py-1' 
-          : 'bg-[#131415]/80 border-[#303236]/30 py-2'
+          ? 'bg-[#131415]/95 border-[#303236]/50 py-0' 
+          : 'bg-[#131415]/80 border-[#303236]/30 py-0.5 md:py-2'
       }`}>
         <ResponsiveContainer>
           <div className={`flex justify-between items-center transition-all duration-300 ${
             scrollPosition > 20 ? 'scale-90' : 'scale-100'
           }`}>
             <Link to="/" className="site-logo z-[101]">
-              <div className="logo-container">
-                <img src={ihorizonImage} alt="iHorizon Logo" className="w-12 h-12" />
+              <div className="logo-container flex items-center">
+                <img src={ihorizonImage} alt="iHorizon Logo" className="w-6 h-6 md:w-12 md:h-12" />
               </div>
               <span className="logo-text">iHorizon</span>
             </Link>
@@ -85,31 +85,42 @@ const Layout = () => {
       
       {/* Menu mobile */}
       <div className={`fixed inset-0 bg-[#131415]/95 backdrop-blur-lg z-[99] transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-8 pt-20">
-          <button
-            onClick={toggleLanguage}
-            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors hover:bg-white/5 rounded-lg"
-            aria-label="Changer la langue"
-          >
-            <Globe size={24} className="mb-2" />
-            <span className="uppercase">{language}</span>
-          </button>
-          <Link 
-            to="/" 
-            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <Home size={24} className="mb-2" />
-            <span>{getTranslation('home', language)}</span>
-          </Link>
-          <Link 
-            to="/documentation" 
-            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <FileText size={24} className="mb-2" />
-            <span>{getTranslation('documentation', language)}</span>
-          </Link>
+        <div className="flex flex-col h-full">
+          <div className="flex justify-end p-4">
+            <button 
+              className="p-2 text-white focus:outline-none"
+              onClick={toggleMobileMenu}
+              aria-label="Fermer le menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
+          <div className="flex flex-col items-center justify-center flex-1 space-y-8 px-4">
+            <Link 
+              to="/" 
+              className="text-xl font-medium flex items-center space-x-2 p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Home size={24} />
+              <span>{getTranslation('home', language)}</span>
+            </Link>
+            <Link 
+              to="/documentation" 
+              className="text-xl font-medium flex items-center space-x-2 p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <FileText size={24} />
+              <span>{getTranslation('documentation', language)}</span>
+            </Link>
+            <button
+              onClick={toggleLanguage}
+              className="text-xl font-medium flex items-center space-x-2 p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
+              aria-label="Changer la langue"
+            >
+              <Globe size={24} />
+              <span className="uppercase">{language}</span>
+            </button>
+          </div>
         </div>
       </div>
       
