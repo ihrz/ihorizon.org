@@ -165,6 +165,12 @@ export const translations = {
           name: 'TyTy',
           content: 'Grâce à ce bot, j\'ai arrêté mes abonnements premium coûteux et non rentables avec MEE6. IHRZ a tout ce dont j\'ai besoin, et bien plus encore. Il est incroyablement complet, et son équipe de développement est vraiment au top.',
           stars: 5
+        },
+        {
+          title: 'Bot Proche de la Communauté',
+          name: 'Gasp',
+          content: 'J\'ai iHorizon parce que c\'est un bot proche de sa communauté. Besoin d\'une nouvelle commande pour votre serveur ? Demandez au staff, rien de plus simple. De plus, le bot est multifonction, ce qui le rend utile dans plein de domaines. Je l\'utilise d\'ailleurs dans mon serveur MT Brawl (37k membres).',
+          stars: 5
         }
       ]
     },
@@ -565,6 +571,12 @@ export const translations = {
           title: 'Cost-Effective Alternative',
           name: 'TyTy',
           content: 'Thanks to this bot, I\'ve stopped my expensive and unprofitable premium subscriptions with MEE6. IHRZ has everything I need, and much more. It\'s incredibly complete, and its development team is really top-notch.',
+          stars: 5
+        },
+        {
+          title: 'Community-Oriented Bot',
+          name: 'Gasp',
+          content: 'I have iHorizon because it is a bot close to its community. Need a new command for your server? Ask the staff, nothing is easier. Plus, the bot is multifunctional, which makes it useful in many areas. I also use it in my MT Brawl server (37k members).',
           stars: 5
         }
       ]

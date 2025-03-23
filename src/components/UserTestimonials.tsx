@@ -21,7 +21,7 @@ const UserTestimonials: React.FC<UserTestimonialsProps> = ({ currentLang }) => {
 
   const averageRating = calculateAverageRating();
 
-  const MAX_TESTIMONIALS = 12;
+  const MAX_TESTIMONIALS = 13;
 
   return (
     <section className="py-20 section-background relative overflow-hidden">
