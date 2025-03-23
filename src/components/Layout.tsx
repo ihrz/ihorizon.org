@@ -17,14 +17,10 @@ const Layout = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    document.body.style.overflow = !mobileMenuOpen ? 'hidden' : '';
   };
 
   useEffect(() => {
     setMobileMenuOpen(false);
-    document.body.style.overflow = '';
-
-    window.scrollTo(0, 0);
   }, []);
   
   useEffect(() => {
@@ -37,7 +33,7 @@ const Layout = () => {
   }, []);
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#131415] via-[#1a1a1c] to-[#131415] overflow-hidden max-w-[100vw]">
+    <div className="min-h-screen bg-gradient-to-b from-[#131415] via-[#1a1a1c] to-[#131415]">
       <header className={`site-header fixed top-0 z-[100] backdrop-blur-md border-b transition-all duration-300 ${
         scrollPosition > 20 
           ? 'bg-[#131415]/95 border-[#303236]/50 py-1' 
@@ -87,12 +83,12 @@ const Layout = () => {
         </ResponsiveContainer>
       </header>
       
-      {/* Menu mobile en dehors du header */}
+      {/* Menu mobile */}
       <div className={`fixed inset-0 bg-[#131415]/95 backdrop-blur-lg z-[99] transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
+        <div className="flex flex-col items-center justify-center h-full space-y-8 pt-20">
           <button
             onClick={toggleLanguage}
-            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors"
+            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors hover:bg-white/5 rounded-lg"
             aria-label="Changer la langue"
           >
             <Globe size={24} className="mb-2" />
@@ -100,7 +96,7 @@ const Layout = () => {
           </button>
           <Link 
             to="/" 
-            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors"
+            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
             onClick={() => setMobileMenuOpen(false)}
           >
             <Home size={24} className="mb-2" />
@@ -108,7 +104,7 @@ const Layout = () => {
           </Link>
           <Link 
             to="/documentation" 
-            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors"
+            className="text-xl font-medium flex flex-col items-center p-3 text-white transition-colors hover:bg-white/5 rounded-lg w-full max-w-xs text-center"
             onClick={() => setMobileMenuOpen(false)}
           >
             <FileText size={24} className="mb-2" />
@@ -117,72 +113,75 @@ const Layout = () => {
         </div>
       </div>
       
-      <main className="relative w-full overflow-x-hidden min-h-[calc(100vh-160px)] pt-20">
-        <Outlet />
-      </main>
-      
-      <footer className="site-footer py-8 border-t border-[#303236]/30">
-        <ResponsiveContainer>
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-8 md:space-y-0">
-            {/* Logo et Copyright */}
-            <div className="text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-                <img
-                  src={ihorizonImage}
-                  alt="iHorizon Logo"
-                  className="w-8 h-8"
-                  loading="eager"
-                />
-                <span className="text-2xl font-bold text-white">iHorizon</span>
-              </div>
-              <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} iHorizon 2025. {getTranslation('copyright', language)}</p>
-            </div>
-
-            {/* Séparateur - visible uniquement sur mobile */}
-            <div className="w-full max-w-xs h-px bg-[#303236]/30 md:hidden"></div>
-
-            {/* Liens et Calculateur */}
-            <div className="flex flex-col md:flex-row md:items-center md:space-x-8 space-y-6 md:space-y-0 w-full md:w-auto">
-              {/* Liens de navigation */}
-              <div className="grid grid-cols-2 md:flex md:space-x-8 gap-6 text-sm w-full md:w-auto">
-                <Link
-                  to="/docs"
-                  className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
-                >
-                  {getTranslation('documentation', language)}
-                </Link>
-                <a
-                  href="https://discord.gg/B6UNgNUjbt"
-                  className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
-                >
-                  {getTranslation('support', language)}
-                </a>
-                <Link
-                  to="/discord"
-                  className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
-                >
-                  {getTranslation('discordBot', language)}
-                </Link>
-                <a
-                  href="https://github.com/ihrz/ihrz"
-                  className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
-                >
-                  {getTranslation('github', language)}
-                </a>
+      {/* Contenu principal */}
+      <div className="relative min-h-screen">
+        <main className="relative w-full min-h-[calc(100vh-160px)] pt-24 md:pt-20">
+          <Outlet />
+        </main>
+        
+        <footer className="site-footer py-8 border-t border-[#303236]/30">
+          <ResponsiveContainer>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-8 md:space-y-0">
+              {/* Logo et Copyright */}
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
+                  <img
+                    src={ihorizonImage}
+                    alt="iHorizon Logo"
+                    className="w-8 h-8"
+                    loading="eager"
+                  />
+                  <span className="text-2xl font-bold text-white">iHorizon</span>
+                </div>
+                <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} iHorizon 2025. {getTranslation('copyright', language)}</p>
               </div>
 
-              {/* Bouton Calculateur */}
-              <Link 
-                to="/tools/bb_calculator" 
-                className="flex items-center justify-center space-x-2 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#db00ac] to-[rgba(192,0,166,0.8)] text-white hover:shadow-lg hover:shadow-pink-600/20 transition-all w-full md:w-auto"
-              >
-                <Calculator size={18} />
-                <span>{getTranslation('calculator', language)}</span>
-              </Link>
+              {/* Séparateur - visible uniquement sur mobile */}
+              <div className="w-full max-w-xs h-px bg-[#303236]/30 md:hidden"></div>
+
+              {/* Liens et Calculateur */}
+              <div className="flex flex-col md:flex-row md:items-center md:space-x-8 space-y-6 md:space-y-0 w-full md:w-auto">
+                {/* Liens de navigation */}
+                <div className="grid grid-cols-2 md:flex md:space-x-8 gap-6 text-sm w-full md:w-auto">
+                  <Link
+                    to="/docs"
+                    className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
+                  >
+                    {getTranslation('documentation', language)}
+                  </Link>
+                  <a
+                    href="https://discord.gg/B6UNgNUjbt"
+                    className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
+                  >
+                    {getTranslation('support', language)}
+                  </a>
+                  <Link
+                    to="/discord"
+                    className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
+                  >
+                    {getTranslation('discordBot', language)}
+                  </Link>
+                  <a
+                    href="https://github.com/ihrz/ihrz"
+                    className="text-white hover:text-[var(--secondaryColor)] transition-colors text-center"
+                  >
+                    {getTranslation('github', language)}
+                  </a>
+                </div>
+
+                {/* Bouton Calculateur */}
+                <Link 
+                  to="/tools/bb_calculator" 
+                  className="flex items-center justify-center space-x-2 px-6 py-2.5 rounded-md bg-gradient-to-r from-[#db00ac] to-[rgba(192,0,166,0.8)] text-white hover:shadow-lg hover:shadow-pink-600/20 transition-all w-full md:w-auto"
+                >
+                  <Calculator size={18} />
+                  <span>{getTranslation('calculator', language)}</span>
+                </Link>
+              </div>
             </div>
-          </div>
-        </ResponsiveContainer>
-      </footer>
+          </ResponsiveContainer>
+        </footer>
+      </div>
     </div>
   );
 };
