@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../tools/bb_calculator/styles.css';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
-import badgeImage from '@/assets/img/badge-boost-calculator.png';
+import badgeImage from '/assets/img/badge-boost-calculator.png';
 import { Calendar, Info } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { format, addMonths } from 'date-fns';

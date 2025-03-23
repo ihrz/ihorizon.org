@@ -1,10 +1,10 @@
 import React from 'react';
 import { getTranslation } from '../translations';
-import automodImage from '@/assets/img/automod-module.png';
-import welcomeImage from '@/assets/img/Welcome-module.png';
-import musicImage from '@/assets/img/music-module.png';
-import invitesImage from '@/assets/img/inv-module.png';
-import tempchannelsImage from '@/assets/img/tempvoice-module.png';
+import automodImage from '/assets/img/automod-module.png';
+import welcomeImage from '/assets/img/Welcome-module.png';
+import musicImage from '/assets/img/music-module.png';
+import invitesImage from '/assets/img/inv-module.png';
+import tempchannelsImage from '/assets/img/tempvoice-module.png';
 
 interface FeaturesProps {
   currentLang: string;

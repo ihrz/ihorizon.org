@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { teamMembers } from '../data/teamMembers';
-import unknownUserImage from '@/assets/img/unknown-user.png';
-import gunsLogoImage from '@/assets/img/icons/guns.lol-logo-black.png';
+import unknownUserImage from '/assets/img/unknown-user.png';
+import gunsLogoImage from '/assets/img/icons/guns.lol-logo-black.png';
 
 interface TeamCarouselProps {
   currentLang: string;

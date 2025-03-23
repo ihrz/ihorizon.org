@@ -29,7 +29,7 @@ const UserTestimonials: React.FC<UserTestimonialsProps> = ({ currentLang }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--quaColor)]/10 to-transparent"></div>
       
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/src/assets/img/pattern.png')] bg-repeat"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/img/pattern.png')] bg-repeat"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 relative">

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { Home, FileText, Calculator, Menu, X, Globe } from 'lucide-react';
 import ResponsiveContainer from './ResponsiveContainer';
-import ihorizonImage from '@/assets/img/ihorizon.png';
+import ihorizonImage from '/assets/img/ihorizon.png';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
 

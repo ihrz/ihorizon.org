@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import helpModuleImage from '@/assets/img/Help-module.png';
+=======
+import React from 'react';
+import helpModuleImage from '/assets/img/Help-module.png';
+>>>>>>> 33bdaaa (Fix)
 import { getTranslation } from '../translations';
 
 interface StatsProps {

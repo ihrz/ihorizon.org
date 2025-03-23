@@ -1,13 +1,13 @@
-import kisakayImage from '@/assets/img/team/kisakay.png';
-import noemieImage from '@/assets/img/team/noemie.png';
-import irisImage from '@/assets/img/team/iris.jpeg';
-import maxineImage from '@/assets/img/team/maxine.png';
-import wyeneImage from '@/assets/img/team/wyene.png';
-import andruImage from '@/assets/img/team/andru.jpg';
-import leewayImage from '@/assets/img/team/leeway.png';
-import etherImage from '@/assets/img/team/ether.png';
-import gabooImage from '@/assets/img/team/gaboo.png';
-import luxImage from '@/assets/img/team/lux.gif';
+import kisakayImage from '/assets/img/team/kisakay.png';
+import noemieImage from '/assets/img/team/noemie.png';
+import irisImage from '/assets/img/team/iris.jpeg';
+import maxineImage from '/assets/img/team/maxine.png';
+import wyeneImage from '/assets/img/team/wyene.png';
+import andruImage from '/assets/img/team/andru.jpg';
+import leewayImage from '/assets/img/team/leeway.png';
+import etherImage from '/assets/img/team/ether.png';
+import gabooImage from '/assets/img/team/gaboo.png';
+import luxImage from '/assets/img/team/lux.gif';
 
 interface TeamMember {
   username: string;

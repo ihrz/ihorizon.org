@@ -14,7 +14,7 @@ import UserTestimonials from "../components/UserTestimonials";
 import Features from "../components/Features";
 import Installation from "../components/Installation";
 import Stats from "../components/Stats";
-import ihorizonImage from '@/assets/img/ihorizon.png';
+import ihorizonImage from '/assets/img/ihorizon.png';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
 
@@ -48,7 +48,7 @@ const HomePage = () => {
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <header className="py-16 md:py-24 section-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('@/assets/img/grid.svg')] opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/assets/img/grid.svg')] opacity-10"></div>
         <ResponsiveContainer>
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
             <div className="text-center md:text-left">
