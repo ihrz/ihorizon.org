@@ -1,45 +1,81 @@
 # Ihorizon React
 
-Application web React moderne utilisant Vite, TypeScript, et Tailwind CSS.
+![Ihorizon Logo](https://ihorizon.org/assets/img/ihorizon.png)
 
-## Technologies utilisées
+Une application web React moderne et performante construite avec les technologies de pointe pour offrir une expérience utilisateur optimale.
 
-- TypeScript
-- Vite
-- Tailwind CSS
-- Shadcn UI
-- React Router
+## 🚀 Technologies
 
-## Installation
+- **TypeScript** - Typage statique pour un code plus robuste
+- **Vite** - Environnement de développement ultra-rapide
+- **Tailwind CSS** - Framework CSS utilitaire hautement personnalisable
+- **Shadcn UI** - Composants d'interface accessibles et élégants
+- **React Router** - Navigation fluide entre les pages
+
+## 📦 Installation
 
 ```bash
+# Cloner le dépôt
+git clone https://github.com/votre-organisation/ihorizon-react.git
+cd ihorizon-react
+
 # Installer les dépendances
 pnpm install
 
 # Lancer le serveur de développement
-pnpm vite
-
-# Construire pour la production
-pnpm build
+pnpm dev
 ```
 
-## Structure du projet
+## 🛠️ Scripts
+
+| Commande | Description |
+|----------|-------------|
+| `pnpm dev` | Lance le serveur de développement |
+| `pnpm run build` | Génère une version optimisée pour la production |
+| `pnpm run deploy` | Déploie l'application sur GitHub Pages |
+| `pnpm preview` | Prévisualise localement la version de production |
+| `pnpm lint` | Exécute les vérifications de linting |
+| `pnpm test` | Lance les tests unitaires |
+
+## 📂 Architecture du projet
 
 ```
+public/
+├── assets/       # Ressources statiques (images, etc.)
+
 src/
-├── assets/      # Ressources statiques
-├── components/  # Composants réutilisables
-├── contexts/    # Contextes React
-├── data/        # Données statiques
-├── hooks/       # Hooks personnalisés
-├── lib/         # Utilitaires et configurations
-├── pages/       # Pages de l'application
-├── tools/       # Outils et utilitaires
-└── translations/# Fichiers de traduction
+├── components/   # Composants React réutilisables
+│   ├── common/   # Composants génériques (boutons, inputs...)
+│   ├── layouts/  # Structures de mise en page
+│   └── modules/  # Composants spécifiques aux fonctionnalités
+├── contexts/     # Contextes React pour la gestion d'état
+├── data/         # Données statiques et constantes
+├── hooks/        # Hooks React personnalisés
+├── lib/          # Utilitaires, helpers et configurations
+├── pages/        # Composants de pages
+├── services/     # Services d'API et logiques métier
+├── styles/       # Styles globaux et configurations Tailwind
+├── tools/        # Outils de développement
+└── translations/ # Fichiers de localisation i18n
 ```
 
-## Scripts disponibles
+## 🌐 Fonctionnalités
 
-- `pnpm dev` : Lance le serveur de développement
-- `pnpm vite` : Construit l'application en mode développement
-- `pnpm preview` : Prévisualise la version de production
+- Interface utilisateur intuitive et responsive
+- Gestion d'état optimisée
+- Support multilingue
+- Système de thèmes clair/sombre
+- Performance optimisée
+- Documentation complète et détaillée
+
+## 📄 Licence
+
+Ce projet est à IrisWeb
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à pull request
+
+---
+
+Développé avec ❤️ par IrisWeb
