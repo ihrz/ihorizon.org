@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import helpModuleImage from '@/assets/img/Help-module.png';
-=======
 import React from 'react';
 import helpModuleImage from '/assets/img/Help-module.png';
->>>>>>> 33bdaaa (Fix)
 import { getTranslation } from '../translations';
 
 interface StatsProps {
@@ -12,35 +7,6 @@ interface StatsProps {
 }
 
 const Stats: React.FC<StatsProps> = ({ currentLang }) => {
-  const [stats, setStats] = useState<{
-    servers: number;
-    members: number;
-    commands: number;
-    category: number;
-  }>({ servers: 0, members: 0, commands: 0, category: 0 });
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch('https://gateway.ihorizon.org/api/ihorizon/v1/bot')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setStats({
-          servers: data.info.servers,
-          members: data.info.members,
-          commands: data.content.commands,
-          category: data.content.category
-        });
-      })
-      .catch((error) => {
-        console.error('Erreur lors de la récupération des données:', error);
-        setError(getTranslation('statsError', currentLang as 'fr' | 'en'));
-      });
-  }, [currentLang]);
   return (
     <section className="py-24 section-background">
       <div className="absolute inset-0 bg-[#1a1a1a]/80 backdrop-blur-sm"></div>
@@ -67,15 +33,15 @@ const Stats: React.FC<StatsProps> = ({ currentLang }) => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           <div className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl p-10 text-center transform hover:scale-105 transition-all duration-300 border border-[var(--secondaryColor)]/20">
-            <p className="text-5xl font-bold gradientText mb-4">{stats.servers}+</p>
+            <p className="text-5xl font-bold gradientText mb-4">1,104+</p>
             <p className="text-xl text-white font-medium">{getTranslation('servers', currentLang as 'fr' | 'en')}</p>
           </div>
           <div className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl p-10 text-center transform hover:scale-105 transition-all duration-300 border border-[var(--secondaryColor)]/20">
-            <p className="text-5xl font-bold gradientText mb-4">{Math.round(stats.members / 1000)}k+</p>
+            <p className="text-5xl font-bold gradientText mb-4">334k+</p>
             <p className="text-xl text-white font-medium">{getTranslation('users', currentLang as 'fr' | 'en')}</p>
           </div>
           <div className="bg-[#1a1a1a]/80 backdrop-blur-sm rounded-xl p-10 text-center transform hover:scale-105 transition-all duration-300 border border-[var(--secondaryColor)]/20">
-            <p className="text-5xl font-bold gradientText mb-4">{stats.commands}+</p>
+            <p className="text-5xl font-bold gradientText mb-4">425+</p>
             <p className="text-xl text-white font-medium">{getTranslation('commands', currentLang as 'fr' | 'en')}</p>
           </div>
         </div>
